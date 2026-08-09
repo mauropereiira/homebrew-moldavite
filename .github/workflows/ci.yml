@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly. Catches upstream Homebrew changes and a release whose assets moved.
+    - cron: '17 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    env:
+      HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
+      HOMEBREW_NO_ANALYTICS: 1
+      HOMEBREW_NO_AUTO_UPDATE: 1
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: tap
+
+      - name: Install the tap from this checkout
+        run: |
+          set -euo pipefail
+          dest="$(brew --repository)/Library/Taps/mauropereiira/homebrew-moldavite"
+          mkdir -p "$(dirname "$dest")"
+          cp -R "$GITHUB_WORKSPACE/tap" "$dest"
+
+      - run: brew style mauropereiira/moldavite
+      - run: brew audit --cask --strict --online --arch all mauropereiira/moldavite/moldavite
+      - run: brew livecheck --cask mauropereiira/moldavite/moldavite
