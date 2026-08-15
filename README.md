@@ -1,4 +1,7 @@
-<h1 align="center">Homebrew tap for Moldavite</h1>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/banner-dark.png">
+  <img src=".github/banner-light.png" alt="Moldavite — Homebrew tap" width="100%">
+</picture>
 
 <p align="center">
   <em>One command, and the notes app is on your Mac.</em>
