@@ -1,9 +1,9 @@
 cask "moldavite" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.2.4"
-  sha256 arm:   "ab73b5794ddc4a73813f7b29928d2e9ee1199e448536e3afbb365fa39a5b8f98",
-         intel: "51df684e98dfea25fe2531adbbae97d31c39ae47688e5fde7fcb01b19ba6d220"
+  version "2.2.5"
+  sha256 arm:   "b3a8c7f2bdf33a71bcafb5da70f616fc672b9498872f3beedd91bf4ce73162d7",
+         intel: "7f02d31d32e4e9801c1f5e83394390a4246549b404756690bf3532dca54b3d95"
 
   # The tag carries a "v" prefix; the filenames do not.
   url "https://github.com/mauropereiira/Moldavite/releases/download/v#{version}/Moldavite_#{version}_#{arch}.dmg"
