@@ -11,7 +11,7 @@
   <a href="https://github.com/mauropereiira/Moldavite">Moldavite</a> ·
   <a href="https://moldavite.dev/">Website</a> ·
   <a href="https://github.com/mauropereiira/moldavite-skills">Agent Skills</a> ·
-  <a href="https://moldavite.dev/guide.html">User Guide</a>
+  <a href="https://moldavite.dev/guide">User Guide</a>
 </p>
 
 ---
