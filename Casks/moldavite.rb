@@ -9,7 +9,7 @@ cask "moldavite" do
   url "https://github.com/mauropereiira/Moldavite/releases/download/v#{version}/Moldavite_#{version}_#{arch}.dmg"
   name "Moldavite"
   desc "Local-first Markdown notes app with a built-in MCP server"
-  homepage "https://github.com/mauropereiira/Moldavite"
+  homepage "https://moldavite.dev/"
 
   livecheck do
     url :url
